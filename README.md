@@ -1,16 +1,21 @@
 # Password Generator Starter Code
 
 ## Description
-This website is to showcase your talents to potential employers for part time or full time work. This website will highlight your achievements and successes as well as how you came to an answer of a problem. 
+This website is a password generator. The password must be between 8-128 characters long. You have to choose at least one lowercase letter, one uppercase letter, one number or one symbol. 
 
 ## Installation
 N/A
 
 ## Usage
-This website is for potential employers to look at your portfolio showcasing your work and potentially hiring you for part time or full time work. Potential employers can easily see your name with a photo and links to an "about you" page, your work and a contact page. In each page the UI will scroll to the corresponding section and the potential employer can easily look at your achievements. 
+This website is for users to generate a password. The password generator will prompt you with choosing a length of password between 8-128 characters. The password generator will prompt you with a lowercase letter option, uppercase letter option, number and symbol to add to your password. you must choose "ok" or "cancel" when making your choice. After going through the prompts it will generate a password with the criteria you selected.  
 
 ## Credits
 N/A
 
 ## License
 See LICENSE in the repo.
+
+## url and screenshot
+https://kennacapri.github.io/03-Challenge-Password/
+
+<img width="745" alt="Screen Shot 2022-10-03 at 3 38 38 PM" src="https://user-images.githubusercontent.com/111388055/193690333-55be05c6-d107-4b72-8a29-f8cf226ee341.png">
