@@ -62,17 +62,27 @@ if (userAddsSymbols) {
   optionsPassword.push(possibleSymbols)
 }
 
+// if (optionsPassword.length){
+// optionsPassword.push(possibleLowercase)
+// }
+
+if (!userAddsLowercase && !userAddsUppercase && !userAddsNumbers && !userAddsSymbols){
+  window.alert("You must select at least one option when creating your password")
+  return
+}
+
 
 var passwordGenerator = ""
 
 // Creates a random number
 for (var i = 0; i < passwordLength; i++) {
   var randomList = getRandomItem(optionsPassword)
-  var randomChar = getRandomItem(randomList)
+  var randomCharacter = getRandomItem(randomList)
+  passwordGenerator += randomCharacter
 }
-
+// Generating random numbers and returning them where they're called
+return passwordGenerator
 }
-
 
 
 
