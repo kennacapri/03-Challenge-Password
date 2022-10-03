@@ -4,15 +4,21 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// random number. math.floor gets rid of decimal
+// random number. math.floor gets rid of decimal in any number
 function randomInt(min, max) {
-  return Math.floor(Math.random()*(max - min) + min)
+  if (!max) {
+    max = min
+    min = 0
+  }
+  var rand = Math.random()
+  return Math.floor(min*(1 - rand) + rand*max)
 }
 
 // Random position in list
-function randomItem(list {
-  return list[randomInt(0, optionsPassword.length - 1)]
-}
+function getRandomItem(list) {
+  return list[randomInt(0, list.length - 1)]
+
+
 
 function generatePassword() {
 
@@ -30,6 +36,7 @@ if (passwordLength < 8 || passwordLength > 128) {
   window.alert("Password length has to be between 8-128")
   return
 }
+
 var userAddsLowercase = window.confirm("Do you want to add lowercase letters to your password")
 var userAddsUppercase = window.confirm("Do you want to add uppercase letters to your password")
 var userAddsNumbers = window.confirm("Do you want to add numbers to your password")
@@ -45,25 +52,30 @@ var possibleSymbols = ["!", "@", "#", "%", "&", "*", "?", "/"]
 
 var optionsPassword = []
 
-if (userAddsNumbers --- true) {
-  optionsPassword.push(possibleNumbers)
-}
-if (userAddsSymbols --- true) {
-  optionsPassword.push(possibleSymbols)
-}
-if (userAddsLowercase --- true) {
+for (var i = 0; i < possibleLowercase.length; i++) {
+possibleUppercase[i] = possibleLowercase[i].toUpperCase()
+
+if (userAddsLowercase) {
   optionsPassword.push(possibleLowercase)
 }
-if (userAddsUppercase --- true) {
+if (userAddsUppercase) {
   optionsPassword.push(possibleUppercase)
 }
+if (userAddsNumbers) {
+  optionsPassword.push(possibleNumbers)
+}
+if (userAddsSymbols) {
+  optionsPassword.push(possibleSymbols)
+}
+
+console.log(optionsPassword)
 
 var passwordGenerator = ""
 
 // Creates a random number
 for (var i = 0; i < passwordLength; i++) {
-  var randomItem = optionsPassword[randomInt(0, optionsPassword.length - 1)]
-  var random
+  var randomlist = getRandomItem(optionsPassword)
+  var randomChar = getRandomItem(randomlist)
 }
 
 }
@@ -81,4 +93,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
