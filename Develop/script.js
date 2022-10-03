@@ -26,8 +26,10 @@ var userAddsSymbols = window.confirm("Do you want to add symbols to your passwor
 var userAddsLowercase = window.confirm("Do you want to add lowercase letters to your password")
 var userAddsUppercase = window.confirm("Do you want to add uppercase letters to your password")
 
-
-
+var possibleNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var possibleSymbols = ["!", "@", "#", "%", "&", "*", "?", "/"]
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 }
 
