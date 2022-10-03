@@ -16,7 +16,7 @@ function randomInt(min, max) {
 
 // Random position in list
 function getRandomItem(list) {
-  return list[randomInt(0, list.length - 1)]
+  return list[randomInt(list.length)]
 
 
 
@@ -68,14 +68,13 @@ if (userAddsSymbols) {
   optionsPassword.push(possibleSymbols)
 }
 
-console.log(optionsPassword)
 
 var passwordGenerator = ""
 
 // Creates a random number
 for (var i = 0; i < passwordLength; i++) {
-  var randomlist = getRandomItem(optionsPassword)
-  var randomChar = getRandomItem(randomlist)
+  var randomList = getRandomItem(optionsPassword)
+  var randomChar = getRandomItem(randomList)
 }
 
 }
