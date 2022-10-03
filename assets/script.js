@@ -1,24 +1,20 @@
-// Assignment code here
 
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // random number. math.floor gets rid of decimal in any number
-function randomInt(min, max) {
-  if (!max) {
+function randomInt(min, max){
+  if (!max){
     max = min
     min = 0
   }
   var rand = Math.random()
-  return Math.floor(min*(1 - rand) + rand*max)
+  return Math.floor(min*(1-rand) + rand*max)
 }
 
 // Random position in list
 function getRandomItem(list) {
   return list[randomInt(list.length)]
-
-
+}
 
 function generatePassword() {
 
@@ -29,11 +25,11 @@ function generatePassword() {
  if (isNaN(passwordLength)) {
   window.alert("That isn't a number")
   return
-
 }
+
 // || means "or"
 if (passwordLength < 8 || passwordLength > 128) {
-  window.alert("Password length has to be between 8-128")
+  window.prompt("Password length has to be between 8-128")
   return
 }
 
@@ -52,8 +48,6 @@ var possibleSymbols = ["!", "@", "#", "%", "&", "*", "?", "/"]
 
 var optionsPassword = []
 
-for (var i = 0; i < possibleLowercase.length; i++) {
-possibleUppercase[i] = possibleLowercase[i].toUpperCase()
 
 if (userAddsLowercase) {
   optionsPassword.push(possibleLowercase)
