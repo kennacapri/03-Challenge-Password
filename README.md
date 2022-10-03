@@ -1,7 +1,16 @@
 # Password Generator Starter Code
 
+## Description
+This website is to showcase your talents to potential employers for part time or full time work. This website will highlight your achievements and successes as well as how you came to an answer of a problem. 
 
-## url and screenshot
-https://kennacapri.github.io/03-Challenge-Password/
+## Installation
+N/A
 
-<img width="745" alt="Screen Shot 2022-10-03 at 3 38 38 PM" src="https://user-images.githubusercontent.com/111388055/193690333-55be05c6-d107-4b72-8a29-f8cf226ee341.png">
+## Usage
+This website is for potential employers to look at your portfolio showcasing your work and potentially hiring you for part time or full time work. Potential employers can easily see your name with a photo and links to an "about you" page, your work and a contact page. In each page the UI will scroll to the corresponding section and the potential employer can easily look at your achievements. 
+
+## Credits
+N/A
+
+## License
+See LICENSE in the repo.
