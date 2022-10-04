@@ -18,20 +18,17 @@ function getRandomItem(list) {
 
 function generatePassword() {
 
-  var userInput = window.prompt("How long do you want your password?")
+  do {
+    var userInput = window.prompt("How long do you want your password? Password length has to be between 8-128")
+    if (userInput === null){
+      return
+    }
+  } while (isNaN(userInput)||userInput < 8 || userInput > 128)
+
+
 
   var passwordLength = parseInt(userInput)
 
- if (isNaN(passwordLength)) {
-  window.alert("That isn't a number")
-  return
-}
-
-// || means "or"
-if (passwordLength < 8 || passwordLength > 128) {
-  window.prompt("Password length has to be between 8-128")
-  return
-}
 
 var userAddsLowercase = window.confirm("Do you want to add lowercase letters to your password")
 var userAddsUppercase = window.confirm("Do you want to add uppercase letters to your password")
@@ -72,16 +69,16 @@ if (!userAddsLowercase && !userAddsUppercase && !userAddsNumbers && !userAddsSym
 }
 
 
-var passwordGenerator = ""
+var passwordGeneratorStr = ""
 
 // Creates a random number
 for (var i = 0; i < passwordLength; i++) {
   var randomList = getRandomItem(optionsPassword)
   var randomCharacter = getRandomItem(randomList)
-  passwordGenerator += randomCharacter
+  passwordGeneratorStr += randomCharacter
 }
 // Generating random numbers and returning them where they're called
-return passwordGenerator
+return passwordGeneratorStr
 }
 
 
